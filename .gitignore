@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments and local secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Training runs and generated artifacts
+/artifacts/
+/outputs/
+/runs/
+/wandb/
+/mlruns/
+/tensorboard/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Generated prediction files
+*_pred.csv
+*_predictions.csv
