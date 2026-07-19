@@ -1,0 +1,13 @@
+# Normalize line endings to LF in the repository; Git converts to the
+# native line ending on checkout per core.autocrlf.
+* text=auto eol=lf
+
+*.ipynb text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.pt binary
+*.pth binary
+*.ckpt binary
