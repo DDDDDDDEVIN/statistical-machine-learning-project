@@ -50,3 +50,9 @@ dist/
 # Generated prediction files
 *_pred.csv
 *_predictions.csv
+
+# Generated data layers (reproducible from data/raw via the notebooks)
+/data/landing/*
+/data/curated/*
+!/data/landing/.gitkeep
+!/data/curated/.gitkeep
