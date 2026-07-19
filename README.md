@@ -61,29 +61,6 @@ Ablations on the final model (Table 2 of the report):
   gives 0.9773 accuracy / 0.9482 F1 — close to SMOTE, suggesting the semi-supervised
   signal matters more than the specific resampling technique.
 
-## Data pipeline
-
-```text
-data/raw (domain1, domain2, test)
-        |
-        v
-data/landing  <-- merged domain1 + domain2, domain-tagged, pre-cleaning
-        |
-        v
-data/curated  <-- empty-text rows dropped, unified {id, text, label, domain} schema
-        |
-        v
-  Baseline models (MLP / BERT)
-  Domain-specific models (domain classifier + MLP or LSTM heads)
-  Domain-unified model (MMD alignment + SMOTE/Mixup resampling + semi-supervised pseudo-labeling)
-        |
-        v
-   checkpoints/ (best weights)  +  results/ (predictions)  +  plots/ (confusion matrices)
-```
-
-`data/landing` and `data/curated` are produced by `MAIN_unified_SMOTE_semi.ipynb`
-and are not tracked in git — see [Reproducing the analysis](#reproducing-the-analysis).
-
 ## Repository structure
 
 ```text
